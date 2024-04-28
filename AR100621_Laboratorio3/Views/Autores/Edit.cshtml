@@ -1,17 +1,10 @@
 ﻿@model AR100621_Laboratorio3.Models.Autores
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Editar";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Edit</title>
-</head>
-<body>
+<h1>Editar</h1>
 
 <h4>Autores</h4>
 <hr />
@@ -36,18 +29,13 @@
                 <span asp-validation-for="Nacionalidad" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Guardar" class="btn btn-success" /> |
+                <a asp-action="Index">Volver atrás</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
-</body>
-</html>

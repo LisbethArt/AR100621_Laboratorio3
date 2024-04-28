@@ -1,22 +1,21 @@
 ﻿@model AR100621_Laboratorio3.Models.Autores
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Detalles";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
+<h1>Detalles</h1>
 
 <div>
     <h4>Autores</h4>
     <hr />
     <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdAutor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdAutor)
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Nombre)
         </dt>
@@ -38,8 +37,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdAutor">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model?.IdAutor">Editar</a> |
+    <a asp-action="Index">Volver atrás</a>
 </div>
-</body>
-</html>
