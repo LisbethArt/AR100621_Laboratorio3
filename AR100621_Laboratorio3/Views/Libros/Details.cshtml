@@ -1,0 +1,72 @@
+﻿@model AR100621_Laboratorio3.Models.Libro
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Libro</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CodigoLibro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CodigoLibro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+        <dt class = "col-sm-2">
+            ISBN
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Isbn)
+        </dd>
+        <dt class = "col-sm-2">
+            Año de edición
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnioEdicion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Editorial)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Editorial)
+        </dd>
+        <dt class = "col-sm-2">
+            Nombre del autor
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OAutores.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            Apellido del autor
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OAutores.Apellido)
+        </dd>
+        <dt class="col-sm-2">
+            Nacionalidad del autor
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OAutores.Nacionalidad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.CodigoLibro">Editar</a> |
+    <a asp-action="Index">Volver atrás</a>
+</div>
